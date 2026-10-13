@@ -4,7 +4,8 @@ public class FeatureRequestTicket extends Ticket {
 
     public FeatureRequestTicket(int votes, String businessJustification, String title, String description, String requester, Priority priority) {
         super(title,description,requester,priority);
-        this.votes = votes;
+        if(votes < 0) throw new IllegalArgumentException("Votes can not be negative.");
+        else this.votes = votes;
         this.businessJustification = businessJustification;
     }
 
@@ -19,6 +20,7 @@ public class FeatureRequestTicket extends Ticket {
     }
 
     public void setVotes(int votes) {
+        if(votes < 0) throw new IllegalArgumentException("Votes cannot be negative.");
         this.votes = votes;
     }
 

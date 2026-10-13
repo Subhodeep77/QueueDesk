@@ -50,5 +50,6 @@ public class BugTicket extends Ticket implements Escalatable {
     }
     public void setStepsToReproduce(String stepsToReproduce) {
         if(stepsToReproduce == null || stepsToReproduce.isBlank()) throw new IllegalArgumentException("steps to reproduce can not be empty.");
+        this.stepsToReproduce = stepsToReproduce;
     }
 }

@@ -73,7 +73,7 @@ public abstract class Ticket {
     }
 
     public void setStatus(Status status) {
-        if(priority == null) throw new IllegalArgumentException("status cannot be set null.");
+        if(status == null) throw new IllegalArgumentException("status cannot be set null.");
         this.status = status;
     }
 
