@@ -32,7 +32,7 @@ public class Main {
                 "Subho",
                 Ticket.Priority.LOW
         );
-
+        bug.escalate();
         tickets.add(bug);
         tickets.add(access);
         tickets.add(feature);
