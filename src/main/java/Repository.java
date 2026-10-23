@@ -38,4 +38,15 @@ public class Repository<T extends Ticket> {
         }
         return Collections.unmodifiableMap(mappedTicket);
     }
+
+    public static <T extends Ticket> T oldest(List<T> tickets) {
+        if(tickets == null || tickets.isEmpty()) return null;
+        T oldestTicket = tickets.get(0);
+        for(T t : tickets) {
+            if(t.getCreatedAt().isBefore(oldestTicket.getCreatedAt())) {
+                oldestTicket = t;
+            }
+        }
+        return oldestTicket;
+    }
 }
