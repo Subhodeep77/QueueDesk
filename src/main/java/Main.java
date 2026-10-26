@@ -46,6 +46,13 @@ public class Main {
                                 System.out.println(t);
                         }
 
+                        try {
+                                TicketReportGenerator.generateReport(collTickets, Path.of("report.txt"));
+                        }
+                        catch (IOException e) {
+                                System.out.println("File writing error: " + e.getMessage());
+                        }
+
                 } catch (IOException e) {
                         System.out.println("File reading error: " + e.getMessage());
 

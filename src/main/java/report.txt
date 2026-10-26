@@ -1,0 +1,19 @@
+===== QueueDesk End-of-Day Report =====
+
+Tickets by Status:
+OPEN: 6
+IN_PROGRESS: 3
+RESOLVED: 1
+CLOSED: 0
+
+Tickets by Priority:
+LOW: 1
+MEDIUM: 2
+HIGH: 4
+CRITICAL: 3
+
+Oldest Open Ticket:
+Login page crashes (ID: 4, Age: 0 hours)
+
+Overdue Critical Tickets:
+No overdue critical tickets present

@@ -11,6 +11,10 @@ public class TicketFileLoader {
     public List<Ticket> load(Path file)
             throws IOException, InvalidTicketDataException {
 
+        if (file == null) {
+            throw new IllegalArgumentException("Reading file cannot be null.");
+        }
+
         List<Ticket> tickets = new ArrayList<>();
 
         try (BufferedReader reader = Files.newBufferedReader(file)) {
@@ -29,10 +33,6 @@ public class TicketFileLoader {
 
                     for (int i = 0; i < fields.length; i++) {
                         fields[i] = fields[i].trim();
-                    }
-
-                    if (fields.length < 1) {
-                        throw new IllegalArgumentException("Empty record");
                     }
 
                     String type = fields[0];
