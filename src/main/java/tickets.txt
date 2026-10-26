@@ -1,25 +1,10 @@
-Login page crashes|Application crashes when user logs in|Rahul|CRITICAL|OPEN|Amit|login,backend
-Dashboard not loading|Dashboard displays a blank page|Priya|HIGH|IN_PROGRESS|Neha|frontend,ui
-Password reset issue|Reset link is not received|Rahul|MEDIUM|OPEN||authentication
-Add dark mode|Users need a dark theme|Ankit|LOW|RESOLVED|Amit|feature,ui
-Payment gateway timeout|Checkout fails when payment takes too long|Meera|CRITICAL|OPEN|Vikram|payments,backend
-Profile picture upload fails|Image upload returns an internal server error|Karan|HIGH|IN_PROGRESS|Neha|profile,upload
-Search results are incorrect|Search returns unrelated products for common keywords|Sana|HIGH|OPEN|Amit|search,backend
-Email notifications delayed|Account notifications arrive several minutes late|Rohit|MEDIUM|IN_PROGRESS|Vikram|notifications,email
-Mobile layout broken|Navigation overlaps the content on small screens|Isha|HIGH|OPEN|Neha|frontend,responsive
-Export report to CSV|Allow users to download reports as CSV files|Dev|MEDIUM|OPEN||feature,reporting
-Session expires too early|Users are logged out after a short period of inactivity|Nikhil|HIGH|OPEN|Amit|auth,session
-Duplicate customer records|The import process creates duplicate customer entries|Pooja|CRITICAL|IN_PROGRESS|Vikram|database,import
-Improve dashboard loading time|Reduce the time required to load dashboard metrics|Arjun|MEDIUM|OPEN|Neha|performance,frontend
-Add two-factor authentication|Provide an additional verification step during login|Kavya|HIGH|OPEN||feature,security
-Invoice total is incorrect|Tax is not included in the displayed invoice total|Manish|CRITICAL|OPEN|Amit|billing,calculation
-Update user email address|Allow users to change their registered email address|Riya|LOW|RESOLVED|Vikram|account,feature
-File attachment too large|Uploads fail without a clear message when files exceed the limit|Aman|MEDIUM|IN_PROGRESS|Neha|upload,validation
-API returns status 500|The orders endpoint fails for some valid requests|Tanya|CRITICAL|OPEN|Amit|api,backend
-Add ticket filtering|Allow users to filter tickets by status and priority|Siddharth|MEDIUM|OPEN||feature,tickets
-Incorrect timezone in activity log|Activity timestamps do not match the user's configured timezone|Naina|LOW|CLOSED|Vikram|timezone,logging
-Cache not invalidated|Updated profile details remain stale until the cache expires|Varun|HIGH|IN_PROGRESS|Amit|cache,backend
-Improve password validation|Show clear rules when a password does not meet requirements|Aditi|MEDIUM|OPEN|Neha|auth,validation
-Database connection pool exhausted|Requests fail when database connections are unavailable|Kabir|CRITICAL|OPEN|Vikram|database,reliability
-Add bulk ticket assignment|Allow managers to assign several tickets at once|Simran|HIGH|OPEN||feature,workflow
-Incorrect sorting in ticket list|Tickets are not sorted by creation time as expected|Yash|MEDIUM|RESOLVED|Amit|sorting,frontend
+BUG|Login page crashes|Application crashes when user logs in|Rahul|CRITICAL|OPEN|Amit|login,backend|CRITICAL|Open the login page and submit valid credentials
+BUG|Dashboard not loading|Dashboard displays a blank page|Priya|HIGH|IN_PROGRESS|Neha|frontend,ui|HIGH|Open the dashboard after signing in
+BUG|Password reset issue|Reset link is not received|Rahul|MEDIUM|OPEN||authentication|MEDIUM|Request a password reset and check the inbox
+BUG|Payment gateway timeout|Checkout fails when payment takes too long|Meera|CRITICAL|OPEN|Vikram|payments,backend|CRITICAL|Proceed to checkout and submit a payment
+BUG|Profile picture upload fails|Image upload returns an internal server error|Karan|HIGH|IN_PROGRESS|Neha|profile,upload|HIGH|Open profile settings and upload a picture
+FEATURE|Add dark mode|Users need a dark theme|Ankit|LOW|RESOLVED|Amit|feature,ui|120|Improves accessibility and user comfort
+FEATURE|Export report to CSV|Allow users to download reports as CSV files|Dev|MEDIUM|OPEN||feature,reporting|45|Supports offline analysis of reports
+FEATURE|Add two-factor authentication|Provide an additional verification step during login|Kavya|HIGH|OPEN||feature,security|200|Improves account security
+ACCESS|Request analytics database access|Need read-only access to analytics data|Priya|HIGH|OPEN|Neha|database,access|AnalyticsDB|READ_ONLY
+ACCESS|Request admin access to staging|Need administrator access to deploy a staging fix|Rohan|CRITICAL|IN_PROGRESS|Vikram|staging,permissions|StagingPortal|ADMIN
