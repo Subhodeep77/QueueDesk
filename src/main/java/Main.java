@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-        public static void main(String[] args) throws IOException, InvalidTicketDataException {
+        public static void main(String[] args)  {
 
                 List<Ticket> tickets = new ArrayList<>();
 
@@ -39,10 +39,18 @@ public class Main {
                 TriageBoard.printTriageBoard(tickets);
                 TicketFileLoader loader = new TicketFileLoader();
 
-                List<Ticket> collTickets = loader.load(Path.of("tickets.txt"));
+                try {
+                        List<Ticket> collTickets = loader.load(Path.of("tickets.txt"));
 
-                for(Ticket t: collTickets) {
-                        System.out.println(t);
+                        for (Ticket t : collTickets) {
+                                System.out.println(t);
+                        }
+
+                } catch (IOException e) {
+                        System.out.println("File reading error: " + e.getMessage());
+
+                } catch (InvalidTicketDataException e) {
+                        System.out.println("Invalid ticket file: " + e.getMessage());
                 }
         }
 }

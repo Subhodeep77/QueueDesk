@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TicketFileLoader {
@@ -20,6 +21,10 @@ public class TicketFileLoader {
                 lineNumber++;
 
                 try {
+                    if (line.isBlank()) {
+                        throw new IllegalArgumentException("Empty record");
+                    }
+
                     String[] fields = line.split("\\|", -1);
 
                     for (int i = 0; i < fields.length; i++) {
@@ -106,6 +111,6 @@ public class TicketFileLoader {
             }
         }
 
-        return tickets;
+        return Collections.unmodifiableList(tickets);
     }
 }

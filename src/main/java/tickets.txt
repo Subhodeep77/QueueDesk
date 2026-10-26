@@ -7,4 +7,4 @@ FEATURE|Add dark mode|Users need a dark theme|Ankit|LOW|RESOLVED|Amit|feature,ui
 FEATURE|Export report to CSV|Allow users to download reports as CSV files|Dev|MEDIUM|OPEN||feature,reporting|45|Supports offline analysis of reports
 FEATURE|Add two-factor authentication|Provide an additional verification step during login|Kavya|HIGH|OPEN||feature,security|200|Improves account security
 ACCESS|Request analytics database access|Need read-only access to analytics data|Priya|HIGH|OPEN|Neha|database,access|AnalyticsDB|READ_ONLY
-ACCESS|Request admin access to staging|Need administrator access to deploy a staging fix|Rohan|CRITICAL|IN_PROGRESS|Vikram|staging,permissions|StagingPortal|ADMIN
+ACCESS|Request admin access to staging|Need administrator access to deploy a staging fix||CRITICAL|IN_PROGRESS|Vikram|staging,permissions|StagingPortal|ADMIN
