@@ -30,7 +30,7 @@ public class FeatureRequestTicket extends Ticket {
 
     public void setBusinessJustification(String businessJustification) {
         if(businessJustification == null || businessJustification.isBlank()) throw new IllegalArgumentException("business justification can not be empty");
-        this.businessJustification = businessJustification;
+        this.businessJustification = businessJustification.trim();
     }
     
 }

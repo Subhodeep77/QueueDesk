@@ -40,7 +40,7 @@ public class AccessRequestTicket extends Ticket implements Escalatable {
     }
     public void setSystemName(String systemName) {
         if(systemName == null || systemName.isBlank()) throw new IllegalArgumentException("System Name can not be empty.");
-        this.systemName = systemName;
+        this.systemName = systemName.trim();
     }
     public AccessLevel getAccessLevel() {
         return accessLevel;

@@ -7,6 +7,8 @@ public class TriageBoard {
         for (Ticket t : tickets) {
             System.out.println("Ticket Estimated Effort: "
                     + t.estimateEffortHours() + " hours");
+            System.out.println("Ticket Description: "
+                    + t.getShortDescription());
             System.out.println("Ticket: " + t);
             if (t instanceof Escalatable e) {
                 System.out.println("Escalated: " + e.isEscalated());

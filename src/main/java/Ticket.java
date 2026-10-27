@@ -54,6 +54,16 @@ public abstract class Ticket implements Comparable<Ticket> {
         return description;
     }
 
+    public String getShortDescription() {
+        int maxLength = 50;
+
+        if (description.length() <= maxLength) {
+            return description;
+        }
+
+        return description.substring(0, maxLength) + "...";
+    }
+
     public String getRequester() {
         return requester;
     }
@@ -81,7 +91,7 @@ public abstract class Ticket implements Comparable<Ticket> {
     public void setDescription(String description) {
         if (description == null || description.isBlank())
             throw new IllegalArgumentException("description cannot be empty.");
-        this.description = description;
+        this.description = description.trim();
     }
 
     public void setPriority(Priority priority) {
@@ -124,11 +134,12 @@ public abstract class Ticket implements Comparable<Ticket> {
     @Override
     public int compareTo(Ticket other) {
         int result = Integer.compare(
-            other.getPriority().ordinal(), this.getPriority().ordinal()
-        );
-        if(result != 0) return result;
+                other.getPriority().ordinal(), this.getPriority().ordinal());
+        if (result != 0)
+            return result;
         result = this.getCreatedAt().compareTo(other.getCreatedAt());
-        if(result != 0) return result;
+        if (result != 0)
+            return result;
         return Integer.compare(this.getId(), other.getId());
     }
 
