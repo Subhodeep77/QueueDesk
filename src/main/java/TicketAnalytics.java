@@ -26,4 +26,12 @@ public final class TicketAnalytics {
                 .collect(Collectors.groupingBy(ticket -> ticket.getAssignee() == null ? "Unassigned" : ticket.getAssignee()));
     }
 
+    public static Double averageEffortHours(List<Ticket> tickets) {
+        if(tickets == null) throw new IllegalArgumentException("Ticket list cannot be null.");
+        return tickets.stream()
+                .mapToDouble(Ticket::estimateEffortHours)
+            .average()
+            .orElse(0.0);
+    }
+
 }
