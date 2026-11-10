@@ -1,11 +1,20 @@
 package com.queuedesk;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = BugTicket.class, name = "bug"),
+        @JsonSubTypes.Type(value = FeatureRequestTicket.class, name = "feature"),
+        @JsonSubTypes.Type(value = AccessRequestTicket.class, name = "access")
+})
 
 public abstract class Ticket implements Comparable<Ticket> {
     private static int nextId = 1;
@@ -39,6 +48,40 @@ public abstract class Ticket implements Comparable<Ticket> {
 
     public Ticket(String title, String requester) {
         this(title, "No description provided", requester, Priority.LOW);
+    }
+
+    protected Ticket(
+            int id,
+            String title,
+            String description,
+            String requester,
+            Priority priority,
+            Status status,
+            LocalDateTime createdAt,
+            String assignee,
+            Set<String> tags) {
+
+        if (id <= 0)
+            throw new IllegalArgumentException("Invalid ticket ID.");
+
+        if (priority == null || status == null || createdAt == null) {
+            throw new IllegalArgumentException("Invalid ticket state.");
+        }
+
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.requester = requester;
+        this.priority = priority;
+        this.status = status;
+        this.createdAt = createdAt;
+        this.assignee = assignee;
+
+        this.tags = tags == null
+                ? new LinkedHashSet<>()
+                : new LinkedHashSet<>(tags);
+
+        nextId = Math.max(nextId, id + 1);
     }
 
     public static int totalCreated() {
