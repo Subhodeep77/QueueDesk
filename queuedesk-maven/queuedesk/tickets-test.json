@@ -1,0 +1,42 @@
+[ {
+  "type" : "bug",
+  "id" : 1,
+  "title" : "Login Crash",
+  "description" : "Application crashes when user logs in",
+  "requester" : "Subho",
+  "priority" : "CRITICAL",
+  "status" : "OPEN",
+  "createdAt" : "2026-11-11T23:19:27.1333118",
+  "assignee" : null,
+  "tags" : [ ],
+  "severity" : "HIGH",
+  "stepsToReproduce" : "Application crashes on login",
+  "escalationLevel" : 0
+}, {
+  "type" : "feature",
+  "id" : 2,
+  "title" : "Dark Mode",
+  "description" : "Add dark mode to the application",
+  "requester" : "Rahul",
+  "priority" : "MEDIUM",
+  "status" : "OPEN",
+  "createdAt" : "2026-11-11T23:19:27.1343128",
+  "assignee" : null,
+  "tags" : [ ],
+  "votes" : 25,
+  "businessJustification" : "Add dark mode support"
+}, {
+  "type" : "access",
+  "id" : 3,
+  "title" : "Database Access",
+  "description" : "Need read access to production database",
+  "requester" : "Amit",
+  "priority" : "HIGH",
+  "status" : "OPEN",
+  "createdAt" : "2026-11-11T23:19:27.1367768",
+  "assignee" : null,
+  "tags" : [ ],
+  "systemName" : "Production Database",
+  "accessLevel" : "READ_ONLY",
+  "escalationLevel" : 0
+} ]

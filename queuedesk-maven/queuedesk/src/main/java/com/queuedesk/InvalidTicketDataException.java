@@ -4,4 +4,8 @@ public class InvalidTicketDataException extends Exception {
     public InvalidTicketDataException(String msg) {
         super(msg);
     }
+
+     public InvalidTicketDataException(String msg, Throwable cause) {
+        super(msg, cause);
+    }
 }
