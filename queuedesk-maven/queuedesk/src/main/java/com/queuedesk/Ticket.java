@@ -1,5 +1,6 @@
 package com.queuedesk;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
@@ -100,6 +101,7 @@ public abstract class Ticket implements Comparable<Ticket> {
         return description;
     }
 
+    @JsonIgnore
     public String getShortDescription() {
         int maxLength = 50;
 
