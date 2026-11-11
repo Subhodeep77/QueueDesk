@@ -1,0 +1,42 @@
+[ {
+  "type" : "bug",
+  "id" : 1,
+  "title" : "Login failure",
+  "description" : "Users cannot log in",
+  "requester" : "Subho",
+  "priority" : "HIGH",
+  "status" : "OPEN",
+  "createdAt" : "2026-11-11T23:26:58.222977",
+  "assignee" : null,
+  "tags" : [ ],
+  "severity" : "CRITICAL",
+  "stepsToReproduce" : "Login fails with valid credentials",
+  "escalationLevel" : 1
+}, {
+  "type" : "access",
+  "id" : 2,
+  "title" : "Admin access",
+  "description" : "Requesting administrator access",
+  "requester" : "Subho",
+  "priority" : "MEDIUM",
+  "status" : "OPEN",
+  "createdAt" : "2026-11-11T23:26:58.2249779",
+  "assignee" : null,
+  "tags" : [ ],
+  "systemName" : "Production Dashboard",
+  "accessLevel" : "ADMIN",
+  "escalationLevel" : 0
+}, {
+  "type" : "feature",
+  "id" : 3,
+  "title" : "Dashboard filters",
+  "description" : "Add date-based filtering",
+  "requester" : "Subho",
+  "priority" : "LOW",
+  "status" : "OPEN",
+  "createdAt" : "2026-11-11T23:26:58.2259885",
+  "assignee" : null,
+  "tags" : [ ],
+  "votes" : 25,
+  "businessJustification" : "Improve user productivity"
+} ]

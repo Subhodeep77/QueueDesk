@@ -1,0 +1,10 @@
+BUG|Login page crashes|Application crashes when user logs in|Rahul|CRITICAL|OPEN|Amit|login,backend|CRITICAL|Open the login page and submit valid credentials
+BUG|Dashboard not loading|Dashboard displays a blank page|Priya|HIGH|IN_PROGRESS|Neha|frontend,ui|HIGH|Open the dashboard after signing in
+BUG|Password reset issue|Reset link is not received|Rahul|MEDIUM|OPEN||authentication|MEDIUM|Request a password reset and check the inbox
+BUG|Payment gateway timeout|Checkout fails when payment takes too long|Meera|CRITICAL|OPEN|Vikram|payments,backend|CRITICAL|Proceed to checkout and submit a payment
+BUG|Profile picture upload fails|Image upload returns an internal server error|Karan|HIGH|IN_PROGRESS|Neha|profile,upload|HIGH|Open profile settings and upload a picture
+FEATURE|Add dark mode|Users need a dark theme|Ankit|LOW|RESOLVED|Amit|feature,ui|120|Improves accessibility and user comfort
+FEATURE|Export report to CSV|Allow users to download reports as CSV files|Dev|MEDIUM|OPEN||feature,reporting|45|Supports offline analysis of reports
+FEATURE|Add two-factor authentication|Provide an additional verification step during login|Kavya|HIGH|OPEN||feature,security|200|Improves account security
+ACCESS|Request analytics database access|Need read-only access to analytics data|Priya|HIGH|OPEN|Neha|database,access|AnalyticsDB|READ_ONLY
+ACCESS|Request admin access to staging|Need administrator access to deploy a staging fix||CRITICAL|IN_PROGRESS|Vikram|staging,permissions|StagingPortal|ADMIN
