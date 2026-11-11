@@ -41,7 +41,17 @@ public class BugTicket extends Ticket implements Escalatable {
 
         super(id, title, description, requester, priority,
                 status, createdAt, assignee, tags);
+        if (severity == null) {
+            throw new IllegalArgumentException("Severity cannot be null.");
+        }
 
+        if (stepsToReproduce == null || stepsToReproduce.isBlank()) {
+            throw new IllegalArgumentException("Steps to reproduce cannot be empty.");
+        }
+
+        if (escalationLevel < 0 || escalationLevel > 3) {
+            throw new IllegalArgumentException("Invalid escalation level.");
+        }
         this.severity = severity;
         this.stepsToReproduce = stepsToReproduce;
         this.escalationLevel = escalationLevel;
@@ -62,7 +72,6 @@ public class BugTicket extends Ticket implements Escalatable {
                 throw new IllegalStateException("Unknown severity");
         }
     }
-
 
     @Override
     public void escalate() {
